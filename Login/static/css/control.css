@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+.control a {
+	margin-right: 10px;
+}
+
+.update-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/update.png) no-repeat;
+}
+
+.delete-icon  a{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/delete.png) no-repeat;
+}
+
+.percent-item:after {
+	content: "%";
+	margin-left: 2px;
+}
+
+/*.temperature-item:after {
+	content: "C";
+	margin-left: 2px;
+}*/
+
+.winter-image {
+	height: 20px;
+	width: 17px;
+	background: url(../img/winter.png) right center no-repeat;
+}
+
+.winter-image.active {
+	background-position: left center;
+}
+
+.summer-image {
+	height: 19px;
+	width: 19px;
+	background: url(../img/summer.png) right center no-repeat;
+}
+
+.summer-image.active {
+	background-position: left center;
+}

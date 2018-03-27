@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<div id="page">
+	<?= file_get_contents('header.php'); ?>
+    <div id="content">
+		<div class="login-view">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<form method ="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                        <div class="form bordered padding-form login-form">
+							<p class="header">Войти в личный кабинет</p>
+							<div class="form-row">
+
+                                <label for="login-email" class="control-label">Ваш Email</label>
+                                <input type="text" name="login_email" id="login-email" class="form-control" />
+                                {{ form.username }}
+                                {{ form.password }}
+
+
+							</div>
+							<div class="form-row">
+
+							</div>
+							<div class="controls">
+								<input type="submit" value="Войти" class="send-button" />
+								<span class="forgot-password">Забыли пароль?</span>
+							</div>
+						</div>
+                        </form>
+						<div class="form bordered padding-form remind-password-form hidden">
+							<p class="header">Напомнить пароль</p>
+							<div class="form-row">
+								<label for="login-email" class="control-label">Ваш Email</label>
+								<input type="text" name="login_email" id="login-email" class="form-control" />
+							</div>
+							<div class="controls">
+								<div class="form-row">
+									<input type="button" value="Отправить" class="send-button" />
+								</div>
+								<span class="return-to-login">Войти в личный кабинет</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form bordered padding-form">
+							<p class="header">Регистрация аккаунта</p>
+							<p>Создав аккаунт, вы сможете совершать покупки намного быстрее и быть всегда в курсе состояния заказа и отслеживать заказы, которые вы уже сделали.</p>
+							<div class="buttons">
+								<a href="registration.php" class="send-button">Зарегистрироваться</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div id="push"></div>
+</div>
+
+

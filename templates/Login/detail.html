@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{{ nodes.name }} </h1>
+{% if nodes.image %}
+<img src="{{ nodes.image.url }}"> alt ='картинка'
+{% endif %}
+</body>
+</html>

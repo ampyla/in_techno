@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.pager {
+	text-align: center !important;
+}
+
+.content {
+	padding-bottom: 20px;
+}
+
+.submenu  {
+	font-size: 13px;
+}
+
+/*#body img {
+    height: 100% !important;
+}*/

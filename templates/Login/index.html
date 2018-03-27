@@ -1,0 +1,39 @@
+{% load rules %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.fix.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/base-layout.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/form.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/control.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}" media="all" />
+
+</head>
+<body>
+<div class = 'top-bar'>
+<section class ='top-bar-section'>
+    <ul class ='right'>
+
+    {% if request.user%}
+        <li><a href="logout"> Выйти {{ request.user }}</a>  </li>
+
+     {% else %}
+        <li><a href="/logt/"> Войти </a>  </li>
+        {% endif %}
+    </ul>
+
+    </section>
+
+</div>
+
+    {% for node in nodes %}
+        <h> <a href="detail/{{ node.slug}}">{{ node.name }}</a>>  </br> </h>
+    {% endfor %}
+
+</body>
+</html>

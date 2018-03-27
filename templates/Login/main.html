@@ -1,0 +1,96 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.fix.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/base-layout.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/form.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/control.css'%}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}" media="all" />
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+	<!--<script src="{% static '/js/bootstrap.min.js'%}"></script>-->
+
+	<!--<script type="text/javascript" src="/lk/assets/bfc89d01/jquery.js"></script>-->
+<!--<script type="text/javascript" src="/lk/assets/bfc89d01/jquery.yiiactiveform.js"></script>-->
+<title>Авторизация - Личный кабинет in-tehno.ru</title>
+		<style>
+		.container {
+			width: 940px !important;
+		}
+	</style>
+	</head>
+
+<body>
+<!-- page -->
+<div id="page">
+	<!-- Site Menu -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+			<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+				<a class="brand" href="http://in-tehno.ru">Вернуться на сайт</a>
+				<div class="nav-collapse collapse">
+				<ul class="nav" id="yw0">
+<li class="active"><a href="/lk/?r=site/login">Вход</a></li>
+</ul>				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Site Menu -->
+	<div class="container content">
+				<!-- content -->
+
+
+
+<form class="form-signin" id="login-form" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+	<h2>Авторизация</h2>
+
+	<div>
+
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-user"></i></span>
+			<!--<input placeholder="Логин" name="LoginForm[username]" id="LoginForm_username" type="text" />-->
+        {{ form.username }}
+        </div>
+
+		<div class="text-error error-field" id="LoginForm_username_em_" style="display:none"></div>	</div>
+
+	<div>
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-lock"></i></span>
+			<!--<input placeholder="Пароль" name="LoginForm[password]" id="LoginForm_password" type="password" />-->
+            {{ form.password }}
+        </div>
+		<div class="text-error error-field" id="LoginForm_password_em_" style="display:none"></div>	</div>
+
+	<div>
+		<input class="btn btn-large btn-primary" type="submit" name="yt0" value="Войти" />	</div>
+
+</form>		<!-- /content -->
+	</div>
+	<div id="push"></div>
+</div>
+<!-- /page -->
+<!-- footer -->
+<div id="footer">
+	<div class="container">
+
+		<p class="muted credit">2018 © Инженерные технологии</p>
+	</div>
+</div>
+<!-- /footer -->
+
+</body>
+</html>
